@@ -2,7 +2,7 @@
 
 pipeline {
 agent {
-label 'Build-'
+label 'Built-in node'
 }
 
 stages {
