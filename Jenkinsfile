@@ -1,31 +1,28 @@
+
 pipeline {
+agent {
+label 'Build-'
+}
 
-    agent {
+stages {
 
-     label 'dhana1'
-
+stage ('Checkout') 
+{
+steps
+    {
+    
+        checkout scm
+        
     }
-    stages {
-
-        stage ('checkout')
-        {
-            steps
-                 {
-
-                     checkout scm
-
-                 }
-
-        }
-
-        stage ('sucessfull excution')
-        {
-            steps {
-                echo "checkout has been done"
-            }
-
-
-        }
-
-
+    
+}
+stage ('sucessfullexcution') 
+{
+    steps {
+        echo "checkout has been done"
     }
+
+}
+}
+
+}
